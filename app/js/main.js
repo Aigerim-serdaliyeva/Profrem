@@ -5,7 +5,7 @@ $(document).ready(function () {
   var $html = $("html, body");
   var $header = $(".header");
   var $menu = $(".main-menu");
-  var headerHeight = 99;
+  var headerHeight = 0;
   var $hamburger = $(".hamburger");
 
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
@@ -68,8 +68,24 @@ $(document).ready(function () {
 
   onscroll();
 
+  var stickyTop = function() {
+    var pageTop = $('.page-top').offset().top;
+  
+    $(window).scroll(function() {
+      var windowTop = $(window).scrollTop();
+  
+      if (pageTop < windowTop) {
+        $('.page-top').css('position', 'fixed');
+      } else {
+        $('.page-top').css('position', 'absolute');
+      }
+    });
+  }
+  stickyTop();
+
+
   // при нажатии на меню плавно скролит к соответсвующему блоку
-  $(".main-menu .link a").click(function (e) {
+  $(".link a").click(function (e) {
     var $href = $(this).attr('href');
     if ($href.length > 1 && $href.charAt(0) == '#' && $($href).length > 0) {
       e.preventDefault();
@@ -86,6 +102,36 @@ $(document).ready(function () {
 
   $top.click(function () {
     $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
+  });
+
+  const spp = 8; // 1000ms / 100px
+
+  $('.gallery').mouseenter( function() {
+    // const $galleryImg = $(this).find('.gallery__img');
+    const $content = $(this).find('.gallery__block');
+    if (!$content || !$content.length) {
+      return;
+    }
+    const height = $('.gallery').height();
+    const contentHeight = $content.height();
+    if (contentHeight > height) {
+      const top = contentHeight - height;
+      const distance = top - (-$content.position().top);
+      $content.stop().animate({
+        'top': -top
+      }, spp * distance);
+    }
+  });
+
+  $('.gallery').mouseleave( function() {
+    const $content = $(this).find('.gallery__img__content');
+    if (!$content || !$content.length) {
+      return;
+    }
+    const height = 0 - $content.position().top;
+    $content.stop().animate({
+      'top': 0
+    }, spp * height);
   });
 
 
@@ -158,15 +204,26 @@ $(document).ready(function () {
   });
 
 
-  $(".carousel-certificates").owlCarousel({
-    loop: true,
-    smartSpeed: 500,
-    margin: 30,
-    navText: ['', ''],
-    responsive: {
-      0: { items: 1, mouseDrag: false, dots: true, nav: false },
-      480: { items: 2, mouseDrag: true, dots: false, nav: true },
-    },
+  // $(".carousel-reviews").owlCarousel({
+  //   loop: true,
+  //   smartSpeed: 500,
+  //   margin: 30,
+  //   navText: ['', ''],
+  //   responsive: {ss
+  //     0: { items: 1, mouseDrag: false, dots: true, nav: true },
+  //     480: { items: 1, mouseDrag: true, dots: true, nav: true },
+  //   },
+  // });
+
+  $('.reviews-slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    arrows: true,
   });
 
 

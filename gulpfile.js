@@ -40,6 +40,8 @@ gulp.task('libs-css', function () {
     'node_modules/remodal/dist/remodal.css',
     'node_modules/remodal/dist/remodal-default-theme.css',
     'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
+    // 'node_modules/slick-carousel/slick/slick.scss',
+    // 'node_modules/slick-carousel/slick/slick.css',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
     'node_modules/hamburgers/dist/hamburgers.min.css',
     'node_modules/font-awesome/css/font-awesome.min.css'
@@ -67,6 +69,7 @@ gulp.task('libs-js', function () {
    'node_modules/remodal/dist/remodal.min.js',
    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
    'node_modules/owl.carousel/dist/owl.carousel.min.js',
+   'node_modules/slick-carousel/slick/slick.min.js',
    'node_modules/jquery.maskedinput/src/jquery.maskedinput.js'
   ])
     .pipe(concat('libs.min.js'))
