@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
 
-  <title>Главная страница</title>
+  <title>Центр профессионального ремонта</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:image" content="path/to/image.jpg">
-  <link rel="shortcut icon" href="img/favicon.ico?v=1" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico?v=11" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/main.min.css">
@@ -26,7 +26,9 @@
 
     <header class="header">
       <div class="container">
+        <div class="header__menu"><img src="./img/menu.svg" alt=""></div>
         <div class="header__content">
+          <div class="header__close"><img src="./img/menu-close.svg" alt=""></div>
           <a href="/" class="logo">
             <img src="./img/logo.svg" alt="">
           </a>
@@ -118,7 +120,7 @@
     <section class="s-tarif inverse" id="service">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="tarif">
               <h2 class="tarif__title">Пакет ремонтных работ «Стандарт»</h2>
               <div class="tarif__block">
@@ -133,7 +135,7 @@
               <button class="button" data-remodal-target="standart">Подробнее</button>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="tarif">
               <h2 class="tarif__title">Пакет ремонтных работ «Комфорт»</h2>
               <div class="tarif__block">
@@ -153,44 +155,94 @@
       </div>
     </section>
 
-    <section class="s-gallery">
+    <section class="s-gallery" id="gallery">
       <div class="s-gallery__content">
         <div class="s-gallery__block">
           <h2 class="s-gallery__title"><span class="s-gallery__title--1">«Стандарт»</span></h2>
           <div class="gallery">
             <div class="gallery__block">
-                <div class="gallery__content">
-                    <a href="./img/galery-standard/img-1.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-1.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-2.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-2.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-3.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-3.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-4.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-4.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-5.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-5.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-6.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-6.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-7.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-7.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-8.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-8.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-9.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-9.jpg" alt="">
-                    </a>
-                    <a href="./img/galery-standard/img-10.jpg" data-fancybox="Gallery" class="gallery__img">
-                      <img src="./img/galery-standard/img-10.jpg" alt="">
-                    </a>
-                </div>
+                <a href="./img/galery-standard/img-1.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-1.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-2.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-2.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-3.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-3.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-4.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-4.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-standard/img-5.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-5.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-6.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-6.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-7.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-7.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-8.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-8.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-standard/img-9.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-9.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-10.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-10.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-11.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-11.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-12.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-12.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-standard/img-13.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-13.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-14.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-14.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-15.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-15.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-16.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-16.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-standard/img-17.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-17.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-18.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-18.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-19.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-19.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-20.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-20.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-standard/img-21.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-21.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-22.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-22.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-23.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-23.jpg" alt="">
+                </a>
+                <a href="./img/galery-standard/img-24.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-standard/img-24.jpg" alt="">
+                </a>
             </div>
           </div>
           
@@ -199,46 +251,140 @@
           <h2 class="s-gallery__title"><span>«Комфорт»</span></h2>
           <div class="gallery">
             <div class="gallery__block">
-              <div class="gallery__content">
-                  <a href="./img/galery-comfort/img-1.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-1.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-2.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-2.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-3.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-3.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-4.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-4.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-5.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-5.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-6.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-6.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-7.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-7.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-8.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-8.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-9.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-9.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-10.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-10.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-11.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-11.jpg" alt="">
-                  </a>
-                  <a href="./img/galery-comfort/img-12.jpg" data-fancybox="Gallery" class="gallery__img">
-                    <img src="./img/galery-comfort/img-12.jpg" alt="">
-                  </a>
-              </div>
+                <a href="./img/galery-comfort/img-1.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-1.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-2.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-2.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-3.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-3.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-4.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-4.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-5.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-5.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-6.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-6.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-7.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-7.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-8.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-8.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-9.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-9.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-10.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-10.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-11.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-11.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-12.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-12.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-13.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-13.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-14.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-14.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-15.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-15.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-16.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-16.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-17.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-17.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-18.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-18.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-19.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-19.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-20.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-20.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-21.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-21.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-22.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-22.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-23.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-23.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-24.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-24.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-25.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-25.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-26.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-26.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-27.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-27.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-28.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-28.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-29.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-29.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-30.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-30.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-31.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-31.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-32.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-32.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-33.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-33.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-34.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-34.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-35.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-35.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-36.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-36.jpg" alt="">
+                </a>
+            </div>
+            <div class="gallery__block">
+                <a href="./img/galery-comfort/img-37.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-37.jpg" alt="">
+                </a>
+                <a href="./img/galery-comfort/img-38.jpg" data-fancybox="Gallery" class="gallery__img">
+                  <img src="./img/galery-comfort/img-38.jpg" alt="">
+                </a>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
@@ -246,7 +392,7 @@
     <section class="s-reviews inverse" id="reviews">
       <div class="container">
         <h2 class="section-title"><span>отзывы</span></h2>
-        <div class="reviews-slider">
+        <div class="owl-carousel carousel-reviews">
           <div class="review">
             <div class="review__text">Очень довольна компетентным и профессиональным персоналом компании «Центр профессионального ремонта», а также качеством выполненных ремонтных работ. Желаю успешного развития и достижения новых вершин в бизнесе!</div>
             <div class="review__name">Гульмира</div>

@@ -5,8 +5,8 @@ $(document).ready(function () {
   var $html = $("html, body");
   var $header = $(".header");
   var $menu = $(".main-menu");
-  var headerHeight = 0;
-  var $hamburger = $(".hamburger");
+  var headerHeight = 99;
+  // var $hamburger = $(".hamburger");
 
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
   var utms = parseGET();
@@ -19,7 +19,7 @@ $(document).ready(function () {
   }
 
   if ($wnd.width() < 992) {
-    headerHeight = 89;
+    headerHeight = 75;
   }
 
   // jquery.maskedinput для ПК и планшет (мобильном не подключаем)
@@ -65,8 +65,22 @@ $(document).ready(function () {
       }
     });
   }
-
   onscroll();
+
+  $('.header__menu').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.header').find('.header__content').addClass('active');
+    $(this).css('position', 'absolute');
+  });
+
+  var closeMenu = function() {
+      $(".header__close").closest(".header__content").removeClass('active');
+      $(".header__close").closest(".header").find('.header__menu').css('position', 'relative');
+  };
+  $(".header__close").click(function() {
+    closeMenu()
+  });
+  closeMenu();  
 
   var stickyTop = function() {
     var pageTop = $('.page-top').offset().top;
@@ -75,9 +89,9 @@ $(document).ready(function () {
       var windowTop = $(window).scrollTop();
   
       if (pageTop < windowTop) {
-        $('.page-top').css('position', 'fixed');
+        $('.page-top').addClass('fixed');
       } else {
-        $('.page-top').css('position', 'absolute');
+        $('.page-top').removeClass('fixed');
       }
     });
   }
@@ -93,46 +107,42 @@ $(document).ready(function () {
       var top = $($href).offset().top - headerHeight;
       $html.stop().animate({ scrollTop: top }, "slow", "swing");
     }
-
-    // как только доходим до блока, скрываем меню
-    if ($wnd.width() <= 991) {
-      toggleHamburger();
-    }
+    closeMenu()
   });
 
   $top.click(function () {
     $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
   });
 
-  const spp = 8; // 1000ms / 100px
+  // const spp = 8; // 1000ms / 100px
 
-  $('.gallery').mouseenter( function() {
-    // const $galleryImg = $(this).find('.gallery__img');
-    const $content = $(this).find('.gallery__block');
-    if (!$content || !$content.length) {
-      return;
-    }
-    const height = $('.gallery').height();
-    const contentHeight = $content.height();
-    if (contentHeight > height) {
-      const top = contentHeight - height;
-      const distance = top - (-$content.position().top);
-      $content.stop().animate({
-        'top': -top
-      }, spp * distance);
-    }
-  });
+  // $('.gallery').mouseleave( function() {
+  //   // const $galleryImg = $(this).find('.gallery__img');
+  //   const $content = $(this).find('.gallery__block');
+  //   if (!$content || !$content.length) {
+  //     return;
+  //   }
+  //   const height = $('.gallery').height();
+  //   const contentHeight = $content.height();
+  //   if (contentHeight > height) {
+  //     const top = contentHeight - height;
+  //     const distance = top - (-$content.position().top);
+  //     $content.stop().animate({
+  //       'top': -top
+  //     }, spp * distance);
+  //   }
+  // });
 
-  $('.gallery').mouseleave( function() {
-    const $content = $(this).find('.gallery__img__content');
-    if (!$content || !$content.length) {
-      return;
-    }
-    const height = 0 - $content.position().top;
-    $content.stop().animate({
-      'top': 0
-    }, spp * height);
-  });
+  // $('.gallery').mouseleave( function() {
+  //   const $content = $(this).find('.gallery__img__content');
+  //   if (!$content || !$content.length) {
+  //     return;
+  //   }
+  //   const height = 0 - $content.position().top;
+  //   $content.stop().animate({
+  //     'top': 0
+  //   }, spp * height);
+  // });
 
 
   // при изменении объязателных полей проверяем можно ли удалять класс error
@@ -143,22 +153,22 @@ $(document).ready(function () {
     }
   });
 
-  $hamburger.click(function () {
-    toggleHamburger();
-    return false;
-  });
+  // $hamburger.click(function () {
+  //   toggleHamburger();
+  //   return false;
+  // });
 
   // показывает и скрывает меню, а также меняет состояние гамбургера
-  function toggleHamburger() {
-    $this = $hamburger;
-    if (!$this.hasClass("is-active")) {
-      $this.addClass('is-active');
-      $menu.slideDown('700');
-    } else {
-      $this.removeClass('is-active');
-      $menu.slideUp('700');
-    }
-  }
+  // function toggleHamburger() {
+  //   $this = $hamburger;
+  //   if (!$this.hasClass("is-active")) {
+  //     $this.addClass('is-active');
+  //     $menu.slideDown('700');
+  //   } else {
+  //     $this.removeClass('is-active');
+  //     $menu.slideUp('700');
+  //   }
+  // }
 
   // при закрытии модального окна удаляем error клас формы в модальном окне
   $(document).on('closing', '.remodal', function (e) {
@@ -204,28 +214,38 @@ $(document).ready(function () {
   });
 
 
-  // $(".carousel-reviews").owlCarousel({
-  //   loop: true,
-  //   smartSpeed: 500,
-  //   margin: 30,
-  //   navText: ['', ''],
-  //   responsive: {ss
-  //     0: { items: 1, mouseDrag: false, dots: true, nav: true },
-  //     480: { items: 1, mouseDrag: true, dots: true, nav: true },
-  //   },
-  // });
+  $(".carousel-reviews").owlCarousel({
+    loop: true,
+    smartSpeed: 500,
+    margin: 30,
+    navText: ['', ''],
+    responsive: {
+      0: { items: 1, mouseDrag: false, dots: true, nav: true },
+      480: { items: 1, mouseDrag: true, dots: true, nav: true },
+    },
+  });
 
   $('.reviews-slider').slick({
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
-    arrows: true,
+    adaptiveHeight: true
   });
 
+  $('.gallery').slick({    
+    vertical: true,
+    autoplay: true,
+    infinite: true,
+    autoplaySpeed: 0,
+    slidesToScroll: 1,
+    slidesToShow: 5,
+    arrows: false,
+    cssEase: 'linear',
+    speed: 8000,
+    initialSlide: 1,
+    draggable: false,
+  });
 
 });
 
