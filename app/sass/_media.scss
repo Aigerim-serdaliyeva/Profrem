@@ -193,27 +193,9 @@
     padding: 14px;
   }
 
-  .form {
-    &--horizontal {
-      .form {
-        &__content {
-          flex-direction: column;
-          max-width: 500px;
-        } 
-        
-        &__info {
-          max-width: 500px;
-        }
-      }
-
-      .input-div {
-        margin-right: 0;
-      }  
-    }
-
-    .input-div, .button {
-      width: 100%;
-    }
+  .input {
+    font-size: 14px;
+    padding: 15px 15px 15px 11px;  
   }
 
   .footer {

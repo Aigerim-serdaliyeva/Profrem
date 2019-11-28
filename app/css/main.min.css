@@ -7280,19 +7280,9 @@ h1, h2, h3, h4, h5, h6 {
     display: none; }
   .button {
     padding: 14px; }
-  .form--horizontal .form__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    max-width: 500px; }
-  .form--horizontal .form__info {
-    max-width: 500px; }
-  .form--horizontal .input-div {
-    margin-right: 0; }
-  .form .input-div, .form .button {
-    width: 100%; }
+  .input {
+    font-size: 14px;
+    padding: 15px 15px 15px 11px; }
   .footer {
     padding: 60px 0;
     font-size: 14px; }
